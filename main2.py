@@ -74,5 +74,23 @@ def promotion_image():
         </html>"""
 
 
+@app.route('/choice/<planet_name>')
+def choice(planet_name):
+    return f"""<!doctype html>
+            <html lang="en">
+            <meta charset="utf-8">
+            <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}"/>
+            <title>Варианты выбора!</title>
+            <body>
+            <h1>Мое предложение: {planet_name}</h1>
+            Эта планета близко к Земле;</br>
+            <fg>На ней много необходимых ресурсов;</fg></br>
+            <fgr>На ней есть вода и атмосфера;</fgr></br>
+            <fy>На ней есть небольшое магнитное поле;</fy></br>
+            <fr>Наконец, она просто красива!</fr>
+            </body>
+            </html>"""
+
+
 if __name__ == '__main__':
     app.run(port=8000, host='127.0.0.1')
