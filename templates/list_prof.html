@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "base.html" %}
+
+{% block content %}
+    {% for prof in list_pr %}
+        {% if list == 'ul' %}
+            <li>{{ prof }}</br></li>
+        {% elif list == 'ol' %}
+            {{loop.index}}. {{ prof }}</br>
+        {% else %}
+            {{ prof }}</br>
+        {% endif %}
+    {% endfor %}{% endblock %}
+
+</html>
