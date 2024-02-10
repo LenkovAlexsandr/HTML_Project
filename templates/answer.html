@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet"
+          href='static/css/style.css'
+          crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ dict['title'] }}</title>
+</head>
+{% extends "base.html" %}
+
+{% block content %}
+    <title>{{ dict['title'] }}</title>
+    <ms1>Фамилия: {{dict['surname']}}</br></ms1>
+    <ms1>Имя: {{dict['name']}}</br></ms1>
+    <ms1>Образование: {{dict['education']}}</br></ms1>
+    <ms1>Профессия: {{dict['profession']}}</br></ms1>
+    <ms1>Пол: {{dict['sex']}}</br></ms1>
+    <ms1>Мотивация: {{dict['motivation']}}</br></ms1>
+    <ms1>Готовы остаться на Марсе? {{dict['ready']}}</ms1>{% endblock %}
+</html>
